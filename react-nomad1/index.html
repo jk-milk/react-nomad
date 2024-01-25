@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    const root = document.getElementById("root");
+    const [count, setcount] = useState(0);
+    const Container = () => (
+      <div>
+        <h3>Total clicks : {count}</h3>
+        <button onclick={setcount}>Click me</button>
+      </div>
+    );
+    ReactDOM.render(<Container />, root);
+  </script>
+</html>
